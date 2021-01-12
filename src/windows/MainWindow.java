@@ -9,7 +9,8 @@ public class MainWindow extends JFrame{
     // TODO: 11-Jan-21 name Tamagochi displayed on top
 
     public MainWindow(){
-        super("hello world");
+        super("Tamagochi game");
+
         setSize(400,500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
