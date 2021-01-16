@@ -11,6 +11,6 @@ public class Main {
     public static void main(String[] args) {
         //new MainWindowSwing();
         MainWindowSwing mainGame = new MainWindowSwing();
-        mainGame.windowCreation();
+        mainGame.newWindow();
     }
 }

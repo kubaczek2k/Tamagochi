@@ -4,21 +4,40 @@ import com.sun.tools.javac.Main;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class MainWindowSwing {
+public class MainWindowSwing extends Window{
     // TODO: 11-Jan-21 Add variable for windows size
     // TODO: 11-Jan-21 button with "nowa gra" text and logic
     // TODO: 11-Jan-21 button with "wczytaj zapis" text and its logic
     // TODO: 11-Jan-21 name Tamagochi displayed on top
 
+    private JFrame frame;
     private JPanel rootPanel;
+    private JLabel titleText;
+    private JButton newGame;
+    private JButton loadGameButton;
 
-    public void windowCreation() {
-        JFrame frame = new JFrame("MainWindowSwing");
-        frame.setContentPane(new MainWindowSwing().rootPanel);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setPreferredSize(new Dimension(600,600));
-        frame.pack();
-        frame.setVisible(true);
+    public MainWindowSwing(){
+        frame = new JFrame("MainWindowSwing");
+        newGame.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                NewGameWindowSwing game = new NewGameWindowSwing(frame);
+            }
+        });
+
+        //logic to work after load game button is pressed
+        loadGameButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+    }
+
+    public void newWindow(){
+        super.newWindow(rootPanel, this, frame);
     }
 }
