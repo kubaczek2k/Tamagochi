@@ -29,6 +29,9 @@ public abstract class Animal {
         if(this.happiness <= 95){
             this.happiness += 5;
         }
+    }
+
+    public void giveVitamins(){
         if(this.health <= 96){
             this.health += 4;
         }
