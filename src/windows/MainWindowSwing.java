@@ -17,7 +17,8 @@ public class MainWindowSwing extends Window{
     private JButton loadGameButton;
 
     public MainWindowSwing(){
-        frame = new JFrame("MainWindowSwing");
+        frame = new JFrame("Tamagochi");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         newGame.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
